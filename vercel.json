@@ -1,0 +1,24 @@
+{
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/dist",
+  "env": {
+    "VITE_API_URL": {
+      "description": "API endpoint for the backend",
+      "example": "http://localhost:8000",
+      "required": false
+    }
+  },
+  "envPrefix": "VITE_",
+  "framework": "svelte",
+  "installCommand": "cd frontend && npm install",
+  "devCommand": "cd frontend && npm run dev",
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
